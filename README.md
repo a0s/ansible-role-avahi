@@ -24,7 +24,7 @@ Role Variables
 Example Playbook
 ----------------
 
-Avahi-daemon default (Ubuntu's) configuration:
+Avahi-daemon's default (Ubuntu's) configuration:
 
 ```yaml
 - hosts: servers
