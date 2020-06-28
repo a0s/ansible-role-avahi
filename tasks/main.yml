@@ -1,0 +1,28 @@
+---
+- name: install avahi-daemon
+  apt:
+    name: ['avahi-daemon']
+    state: present
+    install_recommends: no
+  notify: restart avahi-daemon
+
+- name: configure {{ avahi_default_conf_path }}
+  template:
+    src: etc/default/avahi-daemon
+    dest: "{{ avahi_default_conf_path }}"
+    mode: 0644
+  notify: restart avahi-daemon
+
+- name: configure {{ avahi_conf_path }}
+  template:
+    src: etc/avahi/avahi-daemon.conf
+    dest: "{{ avahi_conf_path }}"
+    mode: 0644
+  notify: restart avahi-daemon
+
+- name: configure {{ avahi_hosts_path }}
+  template:
+    src: etc/avahi/hosts
+    dest: "{{ avahi_hosts_path }}"
+    mode: 0644
+  notify: restart avahi-daemon

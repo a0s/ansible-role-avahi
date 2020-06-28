@@ -1,0 +1,6 @@
+# {{ ansible_managed }}
+
+
+{% for line in avahi_default_conf|default([]) %}
+{{ line }}
+{% endfor %}

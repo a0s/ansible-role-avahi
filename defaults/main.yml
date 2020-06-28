@@ -1,0 +1,12 @@
+---
+avahi_default_conf_path: "/etc/default/avahi-daemon"
+avahi_default_conf: []
+avahi_conf_path: "/etc/avahi/avahi-daemon.conf"
+avahi_conf:
+  server: []
+  wide-area: []
+  publish: []
+  reflector: []
+  rlimits: []
+avahi_hosts_path: "/etc/avahi/hosts"
+avahi_hosts: []

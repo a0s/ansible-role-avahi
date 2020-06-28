@@ -1,0 +1,5 @@
+# {{ ansible_managed }}
+
+{% for line in avahi_hosts | default([]) %}
+{{ line }}
+{% endfor %}
